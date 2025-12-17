@@ -122,12 +122,6 @@ public class Board {
 
 
     public void makeMove(Position position, GameContext gameContext) {
-        // Validate the move first
-        if (!isValidMove(position)) {
-            System.out.println("Invalid move! Position is either out of bounds or already occupied.");
-            return;
-        }
-
         // Determine which symbol to place based on current game state
         Symbol symbol = (gameContext.getCurrentGameState() instanceof PlayerOTurnState)
                 ? Symbol.O
